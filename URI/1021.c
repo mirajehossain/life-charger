@@ -1,13 +1,13 @@
 #include<stdio.h>
 int main()
 {
-    double amount,A,B;
-    int extra, hundard ,fifty, twenty, ten, five, two, coinOne, coin50, coin25, coin10, coin05, coin01;
-    scanf("%.2lf",&amount);
+    double amount,extra;
+    int hundard ,fifty, twenty, ten, five, two, coinOne, coin50, coin25, coin10, coin05, coin01;
+    scanf("%lf",&amount);
     amount = amount*100;
 
     hundard = amount/10000;
-    extra = (int)amount % 10000;
+    extra = amount%10000;
 
     fifty = extra/5000;
     extra = extra%5000;
