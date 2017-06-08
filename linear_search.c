@@ -1,23 +1,20 @@
 #include<stdio.h>
 int main()
 {
-    int a[100], b,i,key,check,location;
+    int a[100], b,i,key;
     scanf("%d\n",&b);
     for(i=0;i<b;i++){
         scanf("%d",&a[i]);
     }
     scanf("%d",&key);
-    location = 0;
     for(i=0;i<b;i++){
-        if(a[i]==key){
-           location = i+1;
+        if(a[i]==key)
            break;
-        }
     }
-        if(!location == 0){
-            printf("%d",location);
-        } else{
+        if(i == b){
             printf("Not found");
+        } else{
+            printf("%d",i+1); /// what location found my key
         }
     return 0;
 }
