@@ -7,14 +7,14 @@ int main()
         scanf("%d",&a[i]);
     }
     scanf("%d",&key);
-    check = 0;
+    location = 0;
     for(i=0;i<b;i++){
         if(a[i]==key){
-           check=1;
            location = i+1;
+           break;
         }
     }
-        if(check == 1){
+        if(!location == 0){
             printf("%d",location);
         } else{
             printf("Not found");
