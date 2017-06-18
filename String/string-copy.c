@@ -11,7 +11,7 @@ int main(){
         i++;
     }
     ///str = strcpy(str2,str1); /// another way
-    str2[i] = '\0';
+    str2[i] = '\0'; /// optional bt its good practice
     printf("input string is %s\n", str1);
     printf("second string is %s\n",  str2 );
     printf("and total string is %d",i);
