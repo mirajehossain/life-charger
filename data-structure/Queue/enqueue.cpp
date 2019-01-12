@@ -32,14 +32,23 @@ void enqueue(int data){
         cout<<"Queue overflow";
         exit(0);
         }
+}
+void printQueue(){
+	Node *print;
+		print = head;
 
-
+		while(print != NULL){
+			cout<<print->data<< " ";
+			print = print->next;
+		}
+		cout<<endl;
 }
 
 int main(){
     int d;
     while(cin>>d){
         enqueue(d);
+        printQueue();
     }
 
 return 0;
