@@ -1,42 +1,17 @@
-#include <iostream>
-#include <math.h>
+#include<iostream>
+#include<math.h>
 using namespace std;
 
-float func(float x)
-{
-	return log(x);
+float f(float x) {
+    return exp(x);
 }
+int main() {
 
-float simpsons_(float ll, float ul, int n)
-{
-	float h = (ul - ll) / n;
-	float x[10], fx[10];
-
-	for (int i = 0; i <= n; i++) {
-		x[i] = ll + i * h;
-		fx[i] = func(x[i]);
-	}
-
-	float res = 0;
-	for (int i = 0; i <= n; i++) {
-		if (i == 0 || i == n)
-			res += fx[i];
-		else if (i % 2 != 0)
-			res += 4 * fx[i];
-		else
-			res += 2 * fx[i];
-	}
-	res = res * (h / 3);
-	return res;
-}
-
-int main()
-{
-	float lower_limit;
-	float upper_limit;
-	int n;
-	cin>>lower_limit>>upper_limit>>n;
-	cout << simpsons_(lower_limit, upper_limit, n);
-	return 0;
+    float a = -1, b = 1, i, h, x1;
+    h = (b - a)/ 2;
+    x1 = a + h;
+    i = (b - a) * ((f(a) + 4 * f(x1) + f(b))/6);
+    cout<<i;
+return 0;
 }
 
