@@ -18,7 +18,7 @@ void insertionSort(int arr[], int n, int pos) {
 int main() {
 	int n = 5;
 	int arr[n] = {123,432,454,333,122};
-	for(int k = 1; k <= 3; k++) {
+	for(int k = 1; k <= 100; k *= 10) {
         insertionSort(arr, n, k);
         for(int i = 0; i< n; i++){
 		cout<<arr[i]<<" ";
@@ -27,4 +27,3 @@ int main() {
     }
 	return 0;
 }
-
