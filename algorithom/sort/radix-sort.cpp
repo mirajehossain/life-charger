@@ -1,4 +1,5 @@
 #include <iostream>
+#include <math.h>
 using namespace std;
 
 void insertionSort(int arr[], int n, int pos) {
@@ -18,7 +19,13 @@ void insertionSort(int arr[], int n, int pos) {
 int main() {
 	int n = 5;
 	int arr[n] = {123,432,454,333,122};
-	for(int k = 1; k <= 100; k *= 10) {
+	int max = 0;
+	for(int i =0; i< n; i++) {
+		if(max < floor(log10(arr[i]) + 1)){
+			max = floor(log10(arr[i]) + 1);
+		}
+	}
+	for(int k = 1; k <= pow(10, max-1); k *= 10) {
         insertionSort(arr, n, k);
         for(int i = 0; i< n; i++){
 		cout<<arr[i]<<" ";
