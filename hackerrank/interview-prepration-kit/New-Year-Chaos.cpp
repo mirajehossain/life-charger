@@ -27,6 +27,37 @@ void minimumBribes(vector<int> q) {
     }
     cout << ans << endl;
 
+    //    map<int, int> qM;
+//
+//    map<int, int>::iterator it;
+//    string msg = "";
+//    int totalBribe = 0;
+//
+//    for (int i = 0; i < q.size(); i++) {
+//        if (msg == "Too chaotic") {
+//            break;
+//        }
+//        for(int j = i+1; j < q.size(); j++) {
+//            if (msg == "Too chaotic") {
+//                break;
+//            }
+//            if (q.at(i) > q.at(j)) {
+//                std::swap(q[i], q[j]);
+//                qM[q.at(j)] = qM[q.at(j)] + 1;
+//                totalBribe++;
+//                if (qM[q.at(j)] > 2) {
+//                    msg = "Too chaotic";
+//                    break;
+//                }
+//            }
+//        }
+//    }
+//
+//    if (msg == "") {
+//        cout<< totalBribe<<endl;
+//    } else {
+//        cout<<msg<<endl;
+//    }
 }
 
 int main()
