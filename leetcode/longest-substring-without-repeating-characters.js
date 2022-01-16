@@ -4,7 +4,6 @@
  */
 var lengthOfLongestSubstring = function(s) {
     let finalMaxCount = 0;
-    let currentMaxCount = 0;
     let set = new Set();
     let j = 0;
     for (let i = 0; i<s.length; i++) {
