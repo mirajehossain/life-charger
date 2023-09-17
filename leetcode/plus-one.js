@@ -1,16 +1,17 @@
-// digits = [6,1,4,5,3,9,0,1,9,5,1,8,6,7,0,5,5,4,3]
-// let res = String(Number(digits.join(''))+1).split('');
-//
-// console.log(Number(digits.join(''))+1)
-// console.log(BigInt(digits.join('')))
-// // console.log(BigInt(digits.join('')) + 1)
-// console.log(res)
-// res = res.map(item => Number(item));
-// console.log(res)
+const plusOne = function(digits) {
+    let n = 0;
+    for (let i = 0; i < digits.length; i++) {
+        n = (n * 10) + digits[i];
+    }
+    n += 1;
 
-let a = [1,2,3,4]
-// 1234
-
-for(let i = 1; i< 5; i++){
-    console.log(i/10, i%10);
+    const finalArray = [];
+    while (n != 0) {
+        finalArray.push(n % 10);
+        n = Math.floor(n / 10);
+    }
+    return finalArray.reverse();
 }
+
+console.log(plusOne([6,1,4,5,3,9,0,1,9,5,1,8,6,7,0,5,5,4,3]))
+// this solution not working for big int
